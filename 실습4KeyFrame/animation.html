@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://127.0.0.1:5500/%EC%8B%A4%EC%8A%B54KeyFrame/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>animation</title>
+        <link rel="stylesheet" href="./animation_files/style.css">
+        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> -->
+    <style>
+        body{
+            background-color: rgb(127, 219, 255);
+        }
+
+        .ryan {
+            position: relative;
+            margin: auto;
+            width: 400px;
+            height: 380px;
+        }
+
+        .ryan .face {
+            position: absolute;
+            bottom: 0;
+            width: 400px;
+            height: 370px;
+            border-radius: 100%;
+            border: 10px solid #000;
+            background: #d59729;
+        }
+
+
+        .ryan .ear {
+            position: absolute;
+            top: 0;
+            width: 92px;
+            height: 92px;
+            border: 10px solid #000;
+            border-radius: 100%;
+            background: #d59729;
+        }
+
+        .ryan .ear.left {
+            left: 25px;
+        }
+
+        .ryan .ear.right {
+            right: 5px;
+        }
+
+        .ryan .eyebrow {
+            position: absolute;
+            top: 100px;
+            width: 80px;
+            height: 15px;
+            border-radius: 15px;
+            background: #000;
+            transition: all 0.2s;
+        }
+
+        .ryan .eyebrow.left {
+            left: 56px;
+        }
+
+        .ryan .eyebrow.right {
+            right: 56px;
+        }
+
+        .ryan .eye {
+            position: absolute;
+            top: 150px;
+            width: 27px;
+            height: 27px;
+            border-radius: 100%;
+            background: #000;
+            transition: all 0.2s;
+        }
+
+        .ryan .eye.left {
+            left: 90px;
+        }
+
+        .ryan .eye.right {
+            right: 90px;
+        }
+
+    </style></head>
+    
+    <body>
+	<div class="ryan">
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+
+        <div class="face">
+            <div class="eyebrow left"></div>
+            <div class="eyebrow right"></div>
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="nose"></div>
+            <div class="mouth left"></div>
+            <div class="mouth right"></div>
+        </div>
+    </div>
+		
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
